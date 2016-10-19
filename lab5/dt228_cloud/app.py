@@ -2,8 +2,8 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
-def hello(name=None):
-    return render_template('hello.html', name=name)
+def hello():
+    return "Index File\n"
 
 @app.route("/hello")
 def hi():
@@ -11,7 +11,7 @@ def hi():
 
 @app.route("/user/<username>")
 def user(username):
-	return 'user %s ' % username
+	return 'user %s \n' % username
 
 @app.route("/post/80")
 def post():
